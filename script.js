@@ -25,11 +25,6 @@ function activateSquares() {
     }
 }
 
-function createHover(i) {
-    // squaresArray[i].classList.add("default-square:hover");
-    squaresArray[i].classList.add("background-color");
-}
-
 const container = document.querySelector("#container");
 let squaresArray = [];
 createSquares();
