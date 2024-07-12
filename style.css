@@ -31,7 +31,7 @@ body {
     width: 44px;
     height: 44px;
     box-sizing: border-box;
-    border: solid black 1px;
+    /* border: solid black 1px; */
 }
 
 .default-square:hover {
