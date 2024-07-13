@@ -19,7 +19,8 @@ function printSquares() {
 function activateSquares() {
     for (let i = 0; i < (size ** 2); i++) {
         squaresArray[i].addEventListener("mouseenter", () => {
-            squaresArray[i].classList.add("background-color");
+            randomizeColor();
+            squaresArray[i].style.backgroundColor = `rgb(${rgbRed}, ${rgbGreen}, ${rgbBlue})`;
         });
     }
 }
@@ -83,6 +84,12 @@ function initializeGrid() {
     activateButton();
 }
 
+function randomizeColor() {
+    rgbRed = Math.round(Math.random() * 255);
+    rgbGreen = Math.round(Math.random() * 255);
+    rgbBlue = Math.round(Math.random() * 255);
+}
+
 function reSizeGrid() {
     deleteSquares();
     deleteArray();
@@ -102,4 +109,7 @@ let canvasSize = 704;
 let size = 16;
 let cssLength = (704 / 16);
 let squaresArray = [];
+let rgbRed = 0;
+let rgbGreen = 0;
+let rgbBlue = 0;
 initializeGrid();
