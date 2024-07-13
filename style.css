@@ -31,11 +31,6 @@ body {
     width: 44px;
     height: 44px;
     box-sizing: border-box;
-    /* border: solid black 1px; */
-}
-
-.default-square:hover {
-    background-color: red;
 }
 
 .background-color {
