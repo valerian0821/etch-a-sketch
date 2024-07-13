@@ -71,6 +71,7 @@ function changeSize() {
 function reSizeCanvas() {
     canvasSize = cssLength * size;
     container.setAttribute("style", `width: ${canvasSize}px; height: ${canvasSize}px;`);
+    canvasSize = 704;
 }
 
 function initializeGrid() {
