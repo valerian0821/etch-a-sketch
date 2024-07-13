@@ -1,4 +1,3 @@
-
 function createSquares() {
     for (let i = 0; i < (size ** 2); i++) {
         squaresArray.push(document.createElement("div"));
@@ -19,7 +18,7 @@ function printSquares() {
 
 function activateSquares() {
     for (let i = 0; i < (size ** 2); i++) {
-        squaresArray[i].addEventListener("mouseenter", function abc(event) {
+        squaresArray[i].addEventListener("mouseenter", () => {
             squaresArray[i].classList.add("background-color");
         });
     }
@@ -49,12 +48,6 @@ function getValidSize() {
     }
     size = Number(input);
 }
-
-// function deactivateSquares() {
-//     for (let i = 0; i < (size ** 2); i++) {
-//         squaresArray[i].removeEventListener("mouseenter", abc);
-//     }
-// }
 
 function deleteSquares() {
     for (let i = 0; i < (size ** 2); i++) {
@@ -90,7 +83,6 @@ function initializeGrid() {
 }
 
 function reSizeGrid() {
-    // deactivateSquares();
     deleteSquares();
     deleteArray();
     getValidSize();
