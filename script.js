@@ -18,10 +18,22 @@ function printSquares() {
 
 function activateSquares() {
     for (let i = 0; i < (size ** 2); i++) {
-        squaresArray[i].addEventListener("mouseenter", () => {
+        squaresArray[i].addEventListener("mouseenter", function setColor() {
             randomizeColor();
             squaresArray[i].style.backgroundColor = `rgb(${rgbRed}, ${rgbGreen}, ${rgbBlue})`;
+            if (squaresArray[i].style.backgroundColor !== null) {
+                squaresArray[i].removeEventListener("mouseenter", setColor);
+            }
         });
+        squaresArray[i].addEventListener("mouseenter", function setOpacity() {
+            if (squaresArray[i].style.opacity === null) {
+                squaresArray[i].style.opacity = 0.1;
+            } else if (squaresArray[i].style.opacity >= 1) {
+                squaresArray[i].removeEventListener("mouseenter", setOpacity);
+            } else {
+                squaresArray[i].style.opacity = Number(squaresArray[i].style.opacity) + 0.1;
+            }
+        })
     }
 }
 
